@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Floor1 from './pages/Buildings/Kashyap/Floor1';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <Floor1 />
+    </div>
+  );
 }
 
-export default App
+export default App;
