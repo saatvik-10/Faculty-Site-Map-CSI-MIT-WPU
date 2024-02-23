@@ -1,10 +1,10 @@
 import React from 'react';
-import Floor1 from './pages/Buildings/Kashyap/Floor1';
+import Home from './pages/Home/Home'
 
 function App() {
   return (
     <div>
-      <Floor1 />
+      <Home />
     </div>
   );
 }
