@@ -7,8 +7,12 @@ module.exports = {
         body: ['Montserrat'],
       },
       colors: { brownRgb: 'rgba(164,145,145)',
-                door: 'rgba(145, 41, 18, 0.67)'
-    },
+                door: 'rgba(145, 41, 18, 0.67)',
+                divs: 'rgb(255,255,255,0.5)',
+                win: 'rgba(66, 25, 25, 0.71)',
+                st1: 'rgba(50, 47, 47, 1)',
+                st2: 'rgba(84, 82, 82, 1)'
+    }
     },
   },
   plugins: [],
