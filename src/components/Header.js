@@ -1,69 +1,75 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import SearchIcon from "@mui/icons-material/Search";
+import { styled, alpha } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
+import img from "./images/mit.png";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import TextField from "@mui/material/TextField";
+import Grid from "@mui/material/Grid";
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   m: 1,
-  borderColor: 'text.primary',
-  '&:hover': {
+  borderColor: "text.primary",
+  "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(1),
-    width: 'auto',
+    width: "auto",
   },
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  width: '100%',
-  '& .MuiInputBase-input': {
+  color: "inherit",
+  width: "100%",
+  "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
+    transition: theme.transitions.create("width"),
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
       },
     },
   },
 }));
 
 const drawerWidth = 240;
-const navItems = ['About Us', 'Contact Us', 'Resource', 'Login/Signup'];
+const navItems = ["About Us", "Contact Us", "Resource", "Login/Signup"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -74,15 +80,15 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant='h6' sx={{ my: 2 }}>
-        <div className='font-body'>FindMyFaculty</div>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        <div className="font-body">FindMyFaculty</div>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -95,29 +101,29 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component='nav' style={{ backgroundColor: '#22356F' }}>
+      <AppBar component="nav" style={{ backgroundColor: "#22356F" }}>
         <Toolbar>
           <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
-            variant='h6'
-            component='div'
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <div className='font-body'>FindMyFaculty</div>
+            <div className="font-body">FindMyFaculty</div>
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: "#fff" }}>
                 {item}
               </Button>
             ))}
@@ -127,8 +133,8 @@ function DrawerAppBar(props) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder='Search…'
-              inputProps={{ 'aria-label': 'search' }}
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
             />
           </Search>
         </Toolbar>
@@ -136,16 +142,16 @@ function DrawerAppBar(props) {
       <nav>
         <Drawer
           container={container}
-          variant='temporary'
+          variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
               width: drawerWidth,
             },
           }}
@@ -153,55 +159,104 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </nav>
-      <Box component='main' sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 1 }}>
         <Toolbar />
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
-          quibusdam, aliquam dolore excepturi quae. Distinctio enim at eligendi
-          perferendis in cum quibusdam sed quae, accusantium et aperiam? Quod
-          itaque exercitationem, at ab sequi qui modi delectus quia corrupti
-          alias distinctio nostrum. Minima ex dolor modi inventore sapiente
-          necessitatibus aliquam fuga et. Sed numquam quibusdam at officia
-          sapiente porro maxime corrupti perspiciatis asperiores, exercitationem
-          eius nostrum consequuntur iure aliquam itaque, assumenda et! Quibusdam
-          temporibus beatae doloremque voluptatum doloribus soluta accusamus
-          porro reprehenderit eos inventore facere, fugit, molestiae ab officiis
-          illo voluptates recusandae. Vel dolor nobis eius, ratione atque
-          soluta, aliquam fugit qui iste architecto perspiciatis. Nobis,
-          voluptatem! Cumque, eligendi unde aliquid minus quis sit debitis
-          obcaecati error, delectus quo eius exercitationem tempore. Delectus
-          sapiente, provident corporis dolorum quibusdam aut beatae repellendus
-          est labore quisquam praesentium repudiandae non vel laboriosam quo ab
-          perferendis velit ipsa deleniti modi! Ipsam, illo quod. Nesciunt
-          commodi nihil corrupti cum non fugiat praesentium doloremque
-          architecto laborum aliquid. Quae, maxime recusandae? Eveniet dolore
-          molestiae dicta blanditiis est expedita eius debitis cupiditate porro
-          sed aspernatur quidem, repellat nihil quasi praesentium quia eos,
-          quibusdam provident. Incidunt tempore vel placeat voluptate iure
-          labore, repellendus beatae quia unde est aliquid dolor molestias
-          libero. Reiciendis similique exercitationem consequatur, nobis placeat
-          illo laudantium! Enim perferendis nulla soluta magni error, provident
-          repellat similique cupiditate ipsam, et tempore cumque quod! Qui, iure
-          suscipit tempora unde rerum autem saepe nisi vel cupiditate iusto.
-          Illum, corrupti? Fugiat quidem accusantium nulla. Aliquid inventore
-          commodi reprehenderit rerum reiciendis! Quidem alias repudiandae eaque
-          eveniet cumque nihil aliquam in expedita, impedit quas ipsum nesciunt
-          ipsa ullam consequuntur dignissimos numquam at nisi porro a, quaerat
-          rem repellendus. Voluptates perspiciatis, in pariatur impedit, nam
-          facilis libero dolorem dolores sunt inventore perferendis, aut
-          sapiente modi nesciunt.
-        </Typography>
+        <Grid container>
+          <Grid item xs={12} md={8}>
+            <Typography>
+              <div className="ml-4">
+                <img src={img} alt="campus map" className="h-[98vh]" />
+              </div>
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <MediaCard />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
 }
 
+export function MediaCard() {
+  return (
+    <Card
+      sx={{
+        maxWidth: 650,
+        backgroundColor: "#2B3144",
+        maxHeight: 1000,
+        borderRadius: 5,
+        mr: 1,
+      }}
+    >
+      <CardContent sx={{ color: "white", textAlign: "center" }}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ marginTop: 2, fontSize: "33px", fontWeight: 650 }}
+        >
+          Book Appointment
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <TextField
+            id="outlined-basic"
+            label="Teacher Name"
+            variant="outlined"
+            sx={{
+              backgroundColor: "#D9D9D9",
+              justifyContent: "center",
+              borderRadius: "20px",
+              width: "100%",
+              Maxwidth: 370,
+              marginTop: 9,
+              border: "none",
+            }}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Appointment Date"
+            variant="outlined"
+            sx={{
+              backgroundColor: "#D9D9D9",
+              justifyContent: "center",
+              borderRadius: "20px",
+              width: "100%",
+              Maxwidth: 370,
+              marginTop: 5,
+            }}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Reason"
+            variant="outlined"
+            sx={{
+              backgroundColor: "#D9D9D9",
+              justifyContent: "center",
+              borderRadius: "20px",
+              marginTop: 5,
+              width: "100%",
+              Maxwidth: 370,
+            }}
+          />
+        </Typography>
+      </CardContent>
+      <CardActions
+        sx={{ justifyContent: "center", marginTop: 8, marginBottom: 10 }}
+      >
+        <Button
+          variant="contained"
+          color="error"
+          sx={{ width: 370, borderRadius: 10, fontWeight: 700 }}
+        >
+          Submit
+        </Button>
+      </CardActions>
+    </Card>
+  );
+}
+
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
