@@ -7,7 +7,7 @@ import { styled } from '@mui/system';
 const FooterWrapper = styled('div')({
   width: '100%',
   height: '150px',
-  backgroundColor: '#2B3144',
+  backgroundColor: '#22356F',
   color: '#fff',
   display: 'flex',
   justifyContent: 'space-between',
