@@ -54,9 +54,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
+      width: '18ch',
       '&:focus': {
-        width: '20ch',
+        width: '25ch',
       },
     },
   },
@@ -99,15 +99,6 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar component='nav' style={{ backgroundColor: '#22356F' }}>
         <Toolbar>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant='h6'
             component='div'
@@ -115,13 +106,6 @@ function DrawerAppBar(props) {
           >
             <div className='font-body'>FindMyFaculty</div>
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -131,6 +115,22 @@ function DrawerAppBar(props) {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          <IconButton
+            color='inherit'
+            aria-label='open drawer'
+            edge='start'
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ color: '#fff' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
         </Toolbar>
       </AppBar>
       <nav>
