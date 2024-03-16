@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css'; // Import external CSS file
+// import './styles.css'; // Import external CSS file
 
 const CampusMap = () => {
     // Function to handle tooltip visibility
