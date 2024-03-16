@@ -16,6 +16,8 @@ module.exports = {
         st2: 'rgba(84, 82, 82, 1)',
         doorns: 'rgba(30, 22, 78, 0.71)',
         winns: 'rgba(106, 95, 235, 0.52)',
+        class_bg: 'rgba(68, 99, 193)',
+        staff_bg: 'rgba(226, 95, 98)',
       },
     },
   },
