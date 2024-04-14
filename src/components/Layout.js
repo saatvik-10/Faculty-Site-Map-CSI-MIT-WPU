@@ -1,7 +1,7 @@
 import React from 'react';
 import DrawerAppBar from './Header';
 import Footer from './Footer';
-import midPart from './midPart';
+// import midPart from './midPart';
 
 const Layout = ({ children }) => {
   return (

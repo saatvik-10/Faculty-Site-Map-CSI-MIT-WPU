@@ -6,7 +6,7 @@ const Floor2 = () => {
     <div className='relative flex flex-col justify-between px-0 h-[80vh] w-auto mt-32 bg-brownRgb' >
       <div className='flex mb-60 h-[26vh] text-xl justify-between'>
         <div className='relative w-3/12 flex bg-divs text-white'>
-          <div className='mt-48 px-5 border-b-4 bg-door'><div className='mt-3'>Door</div></div>
+          <div className='mt-48 px-5 c bg-door'><div className='mt-3'>Door</div></div>
           <div className='ml-3 mb-48 border-b-4 px-14 bg-win'><div className='mt-3'>Window</div></div>
           <div className='mr-0 ml-auto mb-48 border-b-4 px-14 bg-win'><div className='mt-3'>Window</div></div>
           <div className='absolute bottom-1/3 left-1/2 -translate-x-1/2 text-black font-bold text-3xl'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom'; // Change from 'react-dom/client' to 'react-dom'
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
